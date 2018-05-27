@@ -63,13 +63,13 @@ typedef struct {
   uint16_t LastMeas_days;        //!< days elapsed since last successful measurement
   
   Stats<float> Cvolts;           //!< calculated statistics from individual cell voltage query              
-  int16_t CV_min_at;             //!< cell number with voltage mininum in pack
-  int16_t CV_max_at;             //!< cell number with voltage maximum in pack
+  uint16_t CV_min_at;            //!< cell number with voltage minimum in pack
+  uint16_t CV_max_at;            //!< cell number with voltage maximum in pack
   float Cvolts_stdev;            //!< calculated standard deviation (populated)
   
   Stats<float> Ccap_As;          //!< cell capacity statistics calculated from individual cell data
-  int16_t CAP_min_at;            //!< cell number with capacity mininum in pack
-  int16_t CAP_max_at;            //!< cell number with capacity maximum in pack
+  uint16_t CAP_min_at;           //!< cell number with capacity minimum in pack
+  uint16_t CAP_max_at;           //!< cell number with capacity maximum in pack
   
   int16_t CapInit;               //!< battery initial capacity (As/10), at a certain temperature maybe 45 degC
   int16_t CapLoss;               //!< battery capacity loss (x/1000) in %, reflects aging (distance related?)
